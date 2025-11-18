@@ -143,23 +143,23 @@ export const staff: Staff[] = [
   },
   {
     id: 'staff-2',
-    name: "Sarah Lee",
-    role: "Associate Pastor",
-    bio: "Pastor Sarah oversees our small groups and community outreach initiatives. She loves connecting people and helping them find their place in the church family.",
+    name: "Lisa Santhosh",
+    role: "Praise & Worship Leader",
+    bio: "Lisa Santhosh leads our Praise and worship ministry.", 
     imageUrl: "https://picsum.photos/seed/staff2/500/500"
   },
   {
     id: 'staff-3',
-    name: "David Rodriguez",
-    role: "Youth Pastor",
-    bio: "David leads our Velocity Youth ministry. He is dedicated to mentoring the next generation and creating a fun, authentic space for them to encounter God.",
+    name: "Sunitha",
+    role: "Media Directory",
+    bio: "**Sunitha oversees all media operations, including our digital presence and broadcast efforts. She focuses on innovative communication strategies to share our message with a broader audience.**",
     imageUrl: "https://picsum.photos/seed/staff3/500/500"
   },
   {
     id: 'staff-4',
-    name: "Emily Carter",
+    name: "Nancy Anand",
     role: "Children's Ministry Director",
-    bio: "Emily has a heart for kids and families. She leads our GraceKids team with creativity and excellence, making church the best hour of every kid's week.",
+    bio: "Nancy has a heart for kids and families. She leads our GraceKids team with creativity and excellence, making church the best hour of every kid's week.",
     imageUrl: "https://picsum.photos/seed/staff4/500/500"
   },
 ];
