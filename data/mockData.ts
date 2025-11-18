@@ -105,9 +105,9 @@ export const ministries: Ministry[] = [
     id: 'ministry-1',
     name: "GraceKids",
     slug: "kids",
-    description: "Deepwater - GraceKids provides a safe, fun, and engaging environment for children from birth to 5th grade to learn about Jesus on their level. Our amazing team is passionate about partnering with parents to raise a generation of world-changers.",
+    description: "GraceKids provides a safe, fun, and engaging environment for children from birth to 5th grade to learn about Jesus on their level. Our amazing team is passionate about partnering with parents to raise a generation of world-changers.",
     imageUrl: "https://picsum.photos/seed/ministry1/800/600",
-    contactPerson: "Nancy Anand",
+    contactPerson: "Emily Carter",
     contactEmail: "kids@gracecovenant.org",
     meetingInfo: "Sundays during 9 AM & 11 AM services"
   },
@@ -143,23 +143,23 @@ export const staff: Staff[] = [
   },
   {
     id: 'staff-2',
-    name: "Lisa Santhosh",
-    role: "Praise & Worship Leader",
-    bio: "Pastor Lisa oversees our small groups and community outreach initiatives. She loves connecting people and helping them find their place in the church family.",
+    name: "Sarah Lee",
+    role: "Associate Pastor",
+    bio: "Pastor Sarah oversees our small groups and community outreach initiatives. She loves connecting people and helping them find their place in the church family.",
     imageUrl: "https://picsum.photos/seed/staff2/500/500"
   },
   {
     id: 'staff-3',
-    name: "Sunitha",
-    role: "Media & Communications Director",
-    bio: "Sunitha leads our Media ministry. She is passionate about using technology to enhance our worship experience and spread the message of Grace Covenant online.",
+    name: "David Rodriguez",
+    role: "Youth Pastor",
+    bio: "David leads our Velocity Youth ministry. He is dedicated to mentoring the next generation and creating a fun, authentic space for them to encounter God.",
     imageUrl: "https://picsum.photos/seed/staff3/500/500"
   },
   {
     id: 'staff-4',
-    name: "Nancy Anand",
+    name: "Emily Carter",
     role: "Children's Ministry Director",
-    bio: "Nancy has a heart for kids and families. She leads our GraceKids team with creativity and excellence, making church the best hour of every kid's week.",
+    bio: "Emily has a heart for kids and families. She leads our GraceKids team with creativity and excellence, making church the best hour of every kid's week.",
     imageUrl: "https://picsum.photos/seed/staff4/500/500"
   },
 ];
