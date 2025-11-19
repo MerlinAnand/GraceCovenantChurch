@@ -6,50 +6,51 @@ export const churchInfo: ChurchInfo = {
   address: "Stonecutters Neighbourhood Centre, Cnr Stonecutters Drive and Ashlar Cr, Colebee NSW 2761",
   serviceTimes: ["Sundays at 9:00 AM", "Sundays at 11:00 AM"],
   socialMedia: {
-    facebook: "https://facebook.com",
+    facebook: "https://www.facebook.com/gracecovenantchurch.aus/",
     instagram: "https://www.instagram.com/gracecovenantchurch.aus",
-    youtube: "https://youtube.com"
+    youtube: "https://www.youtube.com/@gracecovenantchurchsydney"
   }
 };
 
 export const sermons: Sermon[] = [
   {
     id: 'sermon-1',
-    title: "Deep Calls into Deep",
+    title: "Walking in Power",
     speaker: "Pastor Santhosh",
-    date: "2025-11-16",
-    series: "Foundations",
-    description: "Discover the unshakable foundation of our faith in Jesus Christ and how it applies to our daily lives. A message of hope and strength.",
-    videoUrl: "https://www.youtube.com/watch?v=MMpKozXb50g",
+    date: "2024-07-14",
+    series: "Current Series",
+    description: "In this message, Pastor Santhosh explores what it means to walk in the power of the Holy Spirit. A powerful teaching from our Sunday service on July 14th, 2024.",
+    videoUrl: "https://www.youtube.com/embed/sS_omD02hI0",
+    liveStreamUrl: "https://www.youtube.com/embed/live_stream?channel=UC-9-kyTW8ZkZNDHQJ6FgpwQ",
     audioUrl: "/audio/sermon1.mp3",
     notesUrl: "/notes/sermon1.pdf",
-    scriptureRefs: ["Matthew 7:24-27", "1 Corinthians 3:11"],
+    scriptureRefs: [],
     thumbnailUrl: "https://picsum.photos/seed/sermon1/800/450"
   },
   {
     id: 'sermon-2',
-    title: "Renewal of Mind",
+    title: "The Heart of a Servant",
     speaker: "Pastor Santhosh",
-    date: "2025-11-09",
-    series: "Grace Upon Grace",
-    description: "Explore the depths of God's grace and what it means to live a life transformed by His unmerited favor.",
-    videoUrl: "https://www.youtube.com/watch?v=ZJwgzxivL0c",
+    date: "2024-07-07",
+    series: "Current Series",
+    description: "Discover the importance and posture of having the heart of a servant, as taught by Pastor Santhosh during our Sunday service on July 7th, 2024.",
+    videoUrl: "https://www.youtube.com/embed/kR6ABv7nFkY",
     audioUrl: "/audio/sermon2.mp3",
     notesUrl: "/notes/sermon2.pdf",
-    scriptureRefs: ["Ephesians 2:8-9", "Romans 5:20"],
+    scriptureRefs: [],
     thumbnailUrl: "https://picsum.photos/seed/sermon2/800/450"
   },
   {
     id: 'sermon-3',
-    title: "My Grace is Sufficient",
+    title: "Do Not Be Afraid",
     speaker: "Pastor Santhosh",
-    date: "2025-10-26",
+    date: "2024-06-30",
     series: "Standalone Message",
-    description: "An inspiring message on the biblical importance of community and doing life together with fellow believers.",
-    videoUrl: "https://www.youtube.com/watch?v=MlXnb5zmR80&t=2892s",
+    description: "Pastor Santhosh delivers an encouraging message on why we should not be afraid, based on the promises of God. From our Sunday service on June 30th, 2024.",
+    videoUrl: "https://www.youtube.com/embed/8p_T9x2T3t0",
     audioUrl: "/audio/sermon3.mp3",
     notesUrl: "/notes/sermon3.pdf",
-    scriptureRefs: ["Hebrews 10:24-25", "Acts 2:42-47"],
+    scriptureRefs: [],
     thumbnailUrl: "https://picsum.photos/seed/sermon3/800/450"
   },
 ];
@@ -107,29 +108,29 @@ export const ministries: Ministry[] = [
     slug: "kids",
     description: "GraceKids provides a safe, fun, and engaging environment for children from birth to 5th grade to learn about Jesus on their level. Our amazing team is passionate about partnering with parents to raise a generation of world-changers.",
     imageUrl: "https://picsum.photos/seed/ministry1/800/600",
-    contactPerson: "Emily Carter",
+    contactPerson: "Nancy Anand",
     contactEmail: "kids@gracecovenant.org",
-    meetingInfo: "Sundays during 9 AM & 11 AM services"
+    meetingInfo: "Saturdays during 6:30 PM In Person/Zoom ID - 4735795423"
   },
   {
     id: 'ministry-2',
-    name: "Velocity Youth",
+    name: "Bible Study",
     slug: "youth",
     description: "Velocity is the youth ministry of GraceCovenant for students in 6th-12th grade. We exist to see students connected in community, growing in their faith, and empowered to make a difference in their schools and world.",
     imageUrl: "https://picsum.photos/seed/ministry2/800/600",
-    contactPerson: "David Rodriguez",
+    contactPerson: "Pastor Santhosh",
     contactEmail: "youth@gracecovenant.org",
-    meetingInfo: "Fridays at 7:00 PM"
+    meetingInfo: "Fridays at 7:30 PM"
   },
   {
     id: 'ministry-3',
-    name: "Small Groups",
+    name: "Tongues of Fire",
     slug: "groups",
     description: "We believe life is better together. Small groups are the heart of our church community, providing a place to build friendships, study God's word, and support one another. Groups meet throughout the week in homes across the city.",
     imageUrl: "https://picsum.photos/seed/ministry3/800/600",
-    contactPerson: "Maria Garcia",
+    contactPerson: "Pastor Santhosh",
     contactEmail: "groups@gracecovenant.org",
-    meetingInfo: "Various times and locations"
+    meetingInfo: "Zoom ID - 4735795423"
   },
 ];
 
@@ -145,7 +146,7 @@ export const staff: Staff[] = [
     id: 'staff-2',
     name: "Lisa Santhosh",
     role: "Praise & Worship Leader",
-    bio: "Lisa Santhosh leads our Praise and worship ministry.", 
+    bio: "Lisa Santhosh leads our Praise and worship ministry.Worship is grounded in biblical principles, focusing on thankful praise and honor for God's blessings and his role as a great king", 
     imageUrl: "https://picsum.photos/seed/staff2/500/500"
   },
   {

@@ -7,6 +7,7 @@ export interface Sermon {
   series: string;
   description: string;
   videoUrl: string; 
+  liveStreamUrl?: string;
   audioUrl: string;
   notesUrl: string;
   scriptureRefs: string[];

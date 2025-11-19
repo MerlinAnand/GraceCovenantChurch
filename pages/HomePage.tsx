@@ -4,7 +4,7 @@ import { sermons, events } from '../data/mockData';
 import { ChevronRightIcon } from '../components/icons';
 
 const HeroSection: React.FC = () => (
-  <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/seed/hero/1920/1080')" }}>
+  <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://static.wixstatic.com/media/847726_7e64175396654b22be88544d6da36128~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/847726_7e64175396654b22be88544d6da36128~mv2.jpg')" }}>
     <div className="absolute inset-0 bg-brand-dark-blue bg-opacity-60" />
     <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-extrabold mb-4 animate-fade-in-down">Grace Covenant Church</h1>
@@ -36,8 +36,13 @@ const LatestSermon: React.FC = () => {
     <section className="py-20 bg-brand-cream">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img src={latestSermon.thumbnailUrl} alt={latestSermon.title} className="rounded-lg shadow-xl" />
+          <div className="bg-gray-300 rounded-lg shadow-xl overflow-hidden">
+            <img
+              src={latestSermon.thumbnailUrl}
+              alt={latestSermon.title}
+              className="w-full h-full object-cover"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = 'hidden'; }}
+            />
           </div>
           <div>
             <h3 className="text-sm font-bold uppercase tracking-widest text-brand-gold mb-2">Latest Message</h3>

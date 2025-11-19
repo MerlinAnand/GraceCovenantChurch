@@ -1,10 +1,9 @@
-
 import React from 'react';
 
 const GivePage: React.FC = () => {
   return (
     <div className="bg-white">
-      <div className="relative pt-48 pb-32 bg-cover bg-center text-white" style={{backgroundImage: "url('https://picsum.photos/seed/give/1920/700')"}}>
+      <div className="relative pt-48 pb-32 bg-cover bg-center text-white" style={{backgroundImage: "url('https://static.wixstatic.com/media/847726_9acbf0b372a344778e1b695e554160a3~mv2.jpg/v1/fill/w_1920,h_700,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/847726_9acbf0b372a344778e1b695e554160a3~mv2.jpg')"}}>
           <div className="absolute inset-0 bg-brand-dark-blue bg-opacity-70"></div>
           <div className="relative z-10 text-center">
             <h1 className="text-5xl font-serif font-bold">Give</h1>
