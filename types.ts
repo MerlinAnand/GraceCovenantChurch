@@ -6,12 +6,8 @@ export interface Sermon {
   date: string;
   series: string;
   description: string;
-<<<<<<< HEAD
   videoUrl: string;
-=======
-  videoUrl: string; 
   liveStreamUrl?: string;
->>>>>>> 63cc47b2e33ab74ac5e3a7e022ba7f1468f504ba
   audioUrl: string;
   notesUrl: string;
   scriptureRefs: string[];
