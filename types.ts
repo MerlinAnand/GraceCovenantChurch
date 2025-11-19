@@ -6,7 +6,7 @@ export interface Sermon {
   date: string;
   series: string;
   description: string;
-  videoUrl: string; 
+  videoUrl: string;
   audioUrl: string;
   notesUrl: string;
   scriptureRefs: string[];
@@ -24,7 +24,8 @@ export interface Event {
   description: string;
   imageUrl: string;
   registrationLink: string;
-  category: 'Kids' | 'Youth' | 'Community' | 'Worship';
+  category: 'Kids' | 'Youth' | 'Community' | 'Worship' | 'Study';
+  leadPerson?: string; // Optional: Person leading/teaching the event
 }
 
 export interface Ministry {

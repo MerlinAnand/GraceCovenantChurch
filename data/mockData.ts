@@ -4,11 +4,11 @@ export const churchInfo: ChurchInfo = {
   phone: "0420 685 990",
   email: "connect@gracecovenant.org",
   address: "Stonecutters Neighbourhood Centre, Cnr Stonecutters Drive and Ashlar Cr, Colebee NSW 2761",
-  serviceTimes: ["Sundays at 9:00 AM", "Sundays at 11:00 AM"],
+  serviceTimes: ["Sundays at 9:00 AM - 10:30 AM"],
   socialMedia: {
     facebook: "https://facebook.com",
     instagram: "https://www.instagram.com/gracecovenantchurch.aus",
-    youtube: "https://youtube.com"
+    youtube: "https://www.youtube.com/@GraceCovenantChurchsydney"
   }
 };
 
@@ -57,109 +57,108 @@ export const sermons: Sermon[] = [
 const churchMapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.8282902315053!2d150.84272187633212!3d-33.73887951214045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b129b0f15c15c15%3A0x80854582f3273e34!2sStonecutters%20Neighbourhood%20Centre!5e0!3m2!1sen!2sau!4v1721976935266!5m2!1sen!2sau";
 const churchAddress = "Cnr Stonecutters Drive and Ashlar Cr, Colebee NSW 2761";
 
-
 export const events: Event[] = [
   {
     id: 'event-1',
-    title: "Summer Family Picnic",
-    date: "2024-08-10",
-    time: "12:00 PM - 4:00 PM",
-    locationName: "Central Park",
-    address: "567 Park Rd, New Creation City",
-    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.618037136021!2d-73.98784168459413!3d40.74844097932822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117429%3A0x9a6949c5a2a5a5d1!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1628796853383!5m2!1sen!2sus",
-    description: "Join us for our annual summer picnic! A great time of food, fun, and fellowship for the whole family. We'll have games for kids, a BBQ, and plenty of space to relax.",
-    imageUrl: "https://picsum.photos/seed/event1/1200/600",
-    registrationLink: "#",
-    category: 'Community'
-  },
-  {
-    id: 'event-2',
-    title: "Youth Night: Glow Up",
-    date: "2024-08-16",
-    time: "7:00 PM - 9:30 PM",
+    title: "Sunday Service",
+    date: "2025-11-23",
+    time: "9:00 AM - 10:30 AM",
     locationName: "Stonecutters Neighbourhood Centre",
     address: churchAddress,
     mapEmbedUrl: churchMapEmbedUrl,
-    description: "An exciting night for all middle and high school students! We'll have blacklight games, worship, a powerful message, and free pizza.",
-    imageUrl: "https://picsum.photos/seed/event2/1200/600",
+    description: "Join us for our weekly Sunday service filled with worship, biblical teaching, and fellowship. All are welcome!",
+    imageUrl: "/artifacts/sunday_service_worship_1763537430650.png",
     registrationLink: "#",
-    category: 'Youth'
+    category: 'Worship'
   },
   {
-    id: 'event-3',
-    title: "Worship & Prayer Night",
-    date: "2024-08-28",
+    id: 'event-2',
+    title: "Bible Study",
+    date: "2025-11-21",
     time: "7:30 PM",
     locationName: "Stonecutters Neighbourhood Centre",
     address: churchAddress,
     mapEmbedUrl: churchMapEmbedUrl,
-    description: "An evening dedicated to seeking God's presence through extended worship and prayer. A powerful time to refresh your spirit.",
-    imageUrl: "https://picsum.photos/seed/event3/1200/600",
+    description: "Dive deeper into God's Word in our Bible Study sessions. Join us on the 1st and 3rd Friday of each month.",
+    imageUrl: "/artifacts/bible_study_warmth_1763537438596.png",
     registrationLink: "#",
-    category: 'Worship'
+    category: 'Study'
+  },
+  {
+    id: 'event-3',
+    title: "Teens Bible",
+    date: "2025-11-22",
+    time: "6:30 PM",
+    locationName: "Stonecutters Neighbourhood Centre",
+    address: churchAddress,
+    mapEmbedUrl: churchMapEmbedUrl,
+    description: "Dynamic Bible study for teens led by Nancy Anand. A place for youth to grow in faith, ask questions, and build friendships. Every Saturday at 6:30 PM!",
+    imageUrl: "/artifacts/teens_bible_youth_1763542826529.png",
+    registrationLink: "#",
+    category: 'Youth'
   },
 ];
 
 export const ministries: Ministry[] = [
   {
     id: 'ministry-1',
-    name: "GraceKids",
-    slug: "kids",
-    description: "GraceKids provides a safe, fun, and engaging environment for children from birth to 5th grade to learn about Jesus on their level. Our amazing team is passionate about partnering with parents to raise a generation of world-changers.",
-    imageUrl: "https://picsum.photos/seed/ministry1/800/600",
-    contactPerson: "Emily Carter",
-    contactEmail: "kids@gracecovenant.org",
-    meetingInfo: "Sundays during 9 AM & 11 AM services"
+    name: "Sunday Service",
+    slug: "sunday-service",
+    description: "Join us every Sunday for an inspiring time of worship, biblical teaching, and fellowship. Experience God's presence and connect with our church family as we grow together in faith.",
+    imageUrl: "/artifacts/sunday_service_worship_1763537430650.png",
+    contactPerson: "Pastor Santhosh",
+    contactEmail: "connect@gracecovenant.org",
+    meetingInfo: "Sundays at 9:00 AM - 10:30 AM"
   },
   {
     id: 'ministry-2',
-    name: "Velocity Youth",
-    slug: "youth",
-    description: "Velocity is the youth ministry of GraceCovenant for students in 6th-12th grade. We exist to see students connected in community, growing in their faith, and empowered to make a difference in their schools and world.",
-    imageUrl: "https://picsum.photos/seed/ministry2/800/600",
-    contactPerson: "David Rodriguez",
-    contactEmail: "youth@gracecovenant.org",
-    meetingInfo: "Fridays at 7:00 PM"
+    name: "Bible Study",
+    slug: "bible-study",
+    description: "Dive deeper into God's Word through our Bible Study sessions. A time to explore scripture, ask questions, and grow in understanding together as we study the Bible in depth.",
+    imageUrl: "/artifacts/bible_study_warmth_1763537438596.png",
+    contactPerson: "Pastor Santhosh",
+    contactEmail: "connect@gracecovenant.org",
+    meetingInfo: "1st and 3rd Friday at 7:30 PM"
   },
   {
     id: 'ministry-3',
-    name: "Small Groups",
-    slug: "groups",
-    description: "We believe life is better together. Small groups are the heart of our church community, providing a place to build friendships, study God's word, and support one another. Groups meet throughout the week in homes across the city.",
-    imageUrl: "https://picsum.photos/seed/ministry3/800/600",
-    contactPerson: "Maria Garcia",
-    contactEmail: "groups@gracecovenant.org",
-    meetingInfo: "Various times and locations"
+    name: "Teens Bible",
+    slug: "teens-bible",
+    description: "Teens Bible is a vibrant community where young people ages 13-18 can explore faith, ask tough questions, and grow alongside peers. We create a safe, energetic space where teens encounter God's Word in relevant, engaging ways while building lasting friendships.",
+    imageUrl: "/artifacts/teens_bible_youth_1763542826529.png",
+    contactPerson: "Nancy Anand",
+    contactEmail: "youth@gracecovenant.org",
+    meetingInfo: "Saturdays at 6:30 PM"
   },
 ];
 
 export const staff: Staff[] = [
   {
     id: 'staff-1',
-    name: "Santhosh",
+    name: "Pastor Santhosh",
     role: "Lead Pastor",
-    bio: "Pastor Santhosh has been leading Grace Covenant since its founding. He has a passion for clear, biblical teaching and seeing people's lives transformed by the Gospel.",
-    imageUrl: "https://picsum.photos/seed/staff1/500/500"
+    bio: "Pastor Santhosh has been leading Grace Covenant with a passion for clear, biblical teaching and seeing people's lives transformed by the Gospel. He shepherds our congregation with wisdom and compassion.",
+    imageUrl: "/artifacts/pastor_santhosh.png"
   },
   {
     id: 'staff-2',
     name: "Lisa Santhosh",
     role: "Praise & Worship Leader",
-    bio: "Lisa Santhosh leads our Praise and worship ministry.", 
+    bio: "Lisa Santhosh leads our worship ministry with passion and excellence. Through music and worship, she creates an atmosphere where people can encounter God's presence and express their love for Him.",
     imageUrl: "https://picsum.photos/seed/staff2/500/500"
   },
   {
     id: 'staff-3',
     name: "Sunitha",
-    role: "Media Directory",
-    bio: "**Sunitha oversees all media operations, including our digital presence and broadcast efforts. She focuses on innovative communication strategies to share our message with a broader audience.**",
+    role: "Media Director",
+    bio: "Sunitha oversees all media operations, including our digital presence and broadcast efforts. She focuses on innovative communication strategies to share our message with a broader audience.",
     imageUrl: "https://picsum.photos/seed/staff3/500/500"
   },
   {
     id: 'staff-4',
     name: "Nancy Anand",
-    role: "Children's Ministry Director",
-    bio: "Nancy has a heart for kids and families. She leads our GraceKids team with creativity and excellence, making church the best hour of every kid's week.",
+    role: "Youth Pastor",
+    bio: "Nancy has a passion for the next generation and leads our Teens Bible ministry with energy and authenticity. She creates a space where teens feel valued, heard, and encouraged to pursue Jesus in their own unique way.",
     imageUrl: "https://picsum.photos/seed/staff4/500/500"
   },
 ];
