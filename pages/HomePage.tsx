@@ -4,8 +4,8 @@ import { sermons, events } from '../data/mockData';
 import { ChevronRightIcon } from '../components/icons';
 
 const HeroSection: React.FC = () => (
-  <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/seed/hero/1920/1080')" }}>
-    <div className="absolute inset-0 bg-gradient-hero" />
+  <div className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://static.wixstatic.com/media/847726_7e64175396654b22be88544d6da36128~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/847726_7e64175396654b22be88544d6da36128~mv2.jpg')" }}>
+    <div className="absolute inset-0 bg-brand-dark-blue bg-opacity-60" />
     <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif font-extrabold mb-6 animate-fade-in-down tracking-tight">
         Grace Covenant Church
@@ -60,25 +60,16 @@ const LatestSermon: React.FC = () => {
   return (
     <section className="py-24 bg-gradient-to-br from-brand-cream to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className="order-2 md:order-1">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-brand-gold to-brand-blue rounded-lg blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
-              <img
-                src={latestSermon.thumbnailUrl}
-                alt={latestSermon.title}
-                className="relative rounded-lg shadow-2xl transform group-hover:scale-[1.02] transition duration-500"
-              />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-xl transform group-hover:scale-110 transition cursor-pointer">
-                  <svg className="w-8 h-8 text-brand-dark-blue ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="bg-gray-300 rounded-lg shadow-xl overflow-hidden">
+            <img
+              src={latestSermon.thumbnailUrl}
+              alt={latestSermon.title}
+              className="w-full h-full object-cover"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.visibility = 'hidden'; }}
+            />
           </div>
-          <div className="order-1 md:order-2">
+          <div>
             <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-gold mb-4">Latest Message</h3>
             <h2 className="text-5xl font-serif font-bold text-brand-dark-blue mb-6 leading-tight">{latestSermon.title}</h2>
             <p className="text-lg text-slate-600 mb-4">By {latestSermon.speaker}</p>
@@ -100,32 +91,32 @@ const LatestSermon: React.FC = () => {
 const MinistriesHighlight: React.FC = () => {
   const ministries = [
     {
-      title: "Sunday Service",
-      time: "9:00 AM - 10:30 AM",
-      description: "Join us for worship, teaching, and fellowship",
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-        </svg>
-      )
-    },
-    {
-      title: "Bible Study",
-      time: "1st & 3rd Fridays • 7:30 PM",
-      description: "Dive deeper into God's Word together",
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-        </svg>
-      )
-    },
-    {
-      title: "Teens Bible",
+      title: "GraceKids",
       time: "Saturdays • 6:30 PM",
-      description: "Dynamic Bible study for youth with Nancy Anand",
+      description: "Fun, safe environment for children to learn about Jesus",
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Velocity",
+      time: "Fridays • 7:30 PM",
+      description: "Youth ministry for students in 6th-12th grade",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      )
+    },
+    {
+      title: "Tongues of Fire",
+      time: "Zoom ID: 4735795423",
+      description: "Small groups for deeper community and Bible study",
+      icon: (
+        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
         </svg>
       )
     }

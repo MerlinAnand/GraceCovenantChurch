@@ -56,6 +56,23 @@ const SermonDetailPage: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto">
+
+          {sermon.liveStreamUrl && (
+            <div className="mb-8 text-center">
+              <a
+                href={sermon.liveStreamUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-10 py-4 bg-red-600 text-white font-bold text-lg uppercase tracking-wider rounded-full hover:bg-red-700 transition-transform transform hover:scale-105 animate-pulse"
+              >
+                <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" />
+                </svg>
+                Watch Live
+              </a>
+            </div>
+          )}
+
           <div className="aspect-w-16 aspect-h-9 mb-8 relative" style={{ paddingBottom: '56.25%' }}>
             <iframe
               src={getYouTubeEmbedUrl(sermon.videoUrl)}
@@ -76,7 +93,7 @@ const SermonDetailPage: React.FC = () => {
             <div className="mt-6 border-t pt-6 space-y-4">
               <div>
                 <h3 className="font-bold">Scripture References</h3>
-                <p>{sermon.scriptureRefs.join(', ')}</p>
+                <p>{sermon.scriptureRefs.join(', ') || 'N/A'}</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href={sermon.audioUrl} download className="px-6 py-2 bg-brand-blue text-white font-bold rounded-full text-center hover:bg-brand-dark-blue transition-colors">Download Audio</a>

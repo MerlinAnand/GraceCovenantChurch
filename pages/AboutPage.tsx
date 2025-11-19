@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { staff } from '../data/mockData';
 import type { Staff } from '../types';
@@ -15,7 +14,7 @@ const StaffCard: React.FC<{ person: Staff }> = ({ person }) => (
 const AboutPage: React.FC = () => {
   return (
     <div className="bg-white">
-      <div className="pt-32 pb-16 bg-cover bg-center text-white" style={{backgroundImage: "url('https://picsum.photos/seed/about/1920/600')"}}>
+      <div className="relative pt-32 pb-16 bg-cover bg-center text-white" style={{backgroundImage: "url('https://static.wixstatic.com/media/847726_5e1f1857321e428c89c8a8041c2aa64f~mv2.jpg/v1/fill/w_1920,h_600,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/847726_5e1f1857321e428c89c8a8041c2aa64f~mv2.jpg')"}}>
           <div className="absolute inset-0 bg-brand-dark-blue bg-opacity-70"></div>
           <div className="relative z-10 text-center">
             <h1 className="text-5xl font-serif font-bold">About Us</h1>
