@@ -10,7 +10,10 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-serif font-bold mb-4">Grace Covenant Church</h3>
+            <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
+              <img src="/logo.svg" alt="" className="h-8 w-8" />
+              <h3 className="text-2xl font-serif font-bold">Grace Covenant Church</h3>
+            </div>
             <p className="text-gray-400 max-w-md mx-auto md:mx-0">
               A place to belong, believe, and become.
             </p>

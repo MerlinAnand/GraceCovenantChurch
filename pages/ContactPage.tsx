@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { churchInfo } from '../data/mockData';
 
+type FormStatus = 'idle' | 'sending' | 'sent';
+
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
-  const [formStatus, setFormStatus] = useState('');
+  const [formStatus, setFormStatus] = useState<FormStatus>('idle');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -11,37 +13,60 @@ const ContactPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setFormStatus('Sending...');
+    setFormStatus('sending');
     // Simulate form submission
     console.log('Form data:', formData);
     setTimeout(() => {
-      setFormStatus('Message sent successfully!');
+      setFormStatus('sent');
       setFormData({ name: '', email: '', subject: '', message: '' });
     }, 1000);
   };
 
   return (
     <div className="bg-brand-cream">
-      <div className="pt-32 pb-16 bg-brand-blue text-white text-center">
-        <h1 className="text-5xl font-serif font-bold">Contact Us</h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto">We'd love to hear from you.</p>
+      <div className="relative pt-40 pb-24 bg-cover bg-center" style={{ backgroundImage: "url('/artifacts/sunday_service_worship_1763537430650.png')" }}>
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="relative z-10 text-white text-center px-4">
+          <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-gold mb-4">Get In Touch</h3>
+          <h1 className="text-6xl md:text-7xl font-serif font-extrabold">Contact Us</h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">We'd love to hear from you.</p>
+        </div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
+
           <div className="bg-white p-8 rounded-lg shadow-lg">
-            <h2 className="text-3xl font-serif font-bold text-brand-dark-blue mb-6">Send Us a Message</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"/>
-              <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"/>
-              <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"/>
-              <textarea name="message" placeholder="Your Message" rows={5} value={formData.message} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"></textarea>
-              <button type="submit" className="w-full px-8 py-3 bg-brand-dark-blue text-white font-bold uppercase tracking-wider rounded-full hover:bg-brand-blue transition-colors">
-                Send Message
-              </button>
-              {formStatus && <p className="text-center mt-4">{formStatus}</p>}
-            </form>
+            {formStatus === 'sent' ? (
+              <div className="text-center py-8">
+                <div className="mx-auto w-16 h-16 rounded-full bg-brand-gold/20 flex items-center justify-center mb-6">
+                  <svg className="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h2 className="text-3xl font-serif font-bold text-brand-dark-blue mb-3">Thanks for Reaching Out!</h2>
+                <p className="text-slate-600">We've received your message and will be in touch soon.</p>
+                <button
+                  onClick={() => setFormStatus('idle')}
+                  className="mt-6 text-brand-blue font-semibold hover:text-brand-gold transition-colors"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+              <>
+                <h2 className="text-3xl font-serif font-bold text-brand-dark-blue mb-6">Send Us a Message</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"/>
+                  <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"/>
+                  <input type="text" name="subject" placeholder="Subject" value={formData.subject} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"/>
+                  <textarea name="message" placeholder="Your Message" rows={5} value={formData.message} onChange={handleChange} required className="w-full p-3 border rounded-md focus:ring-brand-gold focus:border-brand-gold"></textarea>
+                  <button type="submit" disabled={formStatus === 'sending'} className="w-full px-8 py-3 bg-brand-dark-blue text-white font-bold uppercase tracking-wider rounded-full hover:bg-brand-blue transition-colors disabled:opacity-60">
+                    {formStatus === 'sending' ? 'Sending...' : 'Send Message'}
+                  </button>
+                </form>
+              </>
+            )}
           </div>
 
           <div className="space-y-8">

@@ -10,6 +10,7 @@ import MinistriesPage from './pages/MinistriesPage';
 import AboutPage from './pages/AboutPage';
 import GivePage from './pages/GivePage';
 import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -39,6 +40,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/give" element={<GivePage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />

@@ -41,7 +41,8 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isOpen ? 'bg-brand-dark-blue shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="text-white text-xl font-serif font-bold tracking-wide">
+          <Link to="/" className="flex items-center gap-3 text-white text-xl font-serif font-bold tracking-wide">
+            <img src="/logo.svg" alt="" className="h-9 w-9" />
             Grace Covenant
           </Link>
 

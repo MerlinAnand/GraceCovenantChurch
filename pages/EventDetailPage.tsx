@@ -18,7 +18,7 @@ const EventDetailPage: React.FC = () => {
 
   return (
     <div>
-      <div className="relative pt-40 pb-20 bg-cover bg-center" style={{ backgroundImage: `url(${event.imageUrl})` }}>
+      <div className="relative pt-40 pb-24 bg-cover bg-center" style={{ backgroundImage: `url(${event.imageUrl})` }}>
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <h1 className="text-5xl font-serif font-bold">{event.title}</h1>
@@ -43,7 +43,7 @@ const EventDetailPage: React.FC = () => {
                 <p className="mt-2"><strong>Location:</strong><br/>{event.locationName}<br/>{event.address}</p>
               </div>
               <a href={event.registrationLink} className="w-full block text-center px-8 py-3 bg-brand-gold text-brand-dark-blue font-bold uppercase tracking-wider rounded-full hover:bg-opacity-90 transition-colors">
-                Register Now
+                RSVP via Email
               </a>
             </div>
           </div>

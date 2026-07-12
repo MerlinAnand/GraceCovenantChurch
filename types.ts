@@ -7,9 +7,6 @@ export interface Sermon {
   series: string;
   description: string;
   videoUrl: string;
-  liveStreamUrl?: string;
-  audioUrl: string;
-  notesUrl: string;
   scriptureRefs: string[];
   thumbnailUrl: string;
 }
@@ -32,7 +29,6 @@ export interface Event {
 export interface Ministry {
   id: string;
   name: string;
-  slug: string;
   description: string;
   imageUrl: string;
   contactPerson: string;

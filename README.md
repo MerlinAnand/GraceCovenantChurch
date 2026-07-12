@@ -1,20 +1,25 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Grace Covenant Church Sydney
 
-# Run and deploy your AI Studio app
+The website for Grace Covenant Church, Sydney — sermons, events, ministries, and information for the community.
 
-This contains everything you need to run your app locally.
+## Stack
 
-View your app in AI Studio: https://ai.studio/apps/drive/1-SXjyju9hTE7b1BrH-RPzIALNNaBlNl7
+React + TypeScript, built with Vite, styled with Tailwind CSS.
 
-## Run Locally
+## Run locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js 18+
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Run the dev server:
    `npm run dev`
+3. Build for production:
+   `npm run build`
+4. Preview a production build:
+   `npm run preview`
+
+## Known limitations
+
+- The **Give** page does not process real payments — no payment provider is configured. It currently shows an informational message directing visitors to contact the church directly.
+- The **Contact** page form does not send a real email — no backend/email service is configured. Submissions currently only show a confirmation in the UI. Wiring this up to a service like Formspree (or a small serverless function) is a natural next step if real form delivery is needed.

@@ -15,43 +15,36 @@ export const churchInfo: ChurchInfo = {
 export const sermons: Sermon[] = [
   {
     id: 'sermon-1',
-    title: "Walking in Power",
+    title: "Included!",
     speaker: "Pastor Santhosh",
-    date: "2024-07-14",
-    series: "Spirit Led Living",
-    description: "In this powerful message, Pastor Santhosh explores what it means to walk in the power of the Holy Spirit. Discover how to move beyond mere religious activity into a dynamic, Spirit-empowered life that impacts your daily walk with God and influences those around you.",
-    videoUrl: "https://www.youtube.com/embed/sS_omD02hI0",
-    liveStreamUrl: "https://www.youtube.com/embed/live_stream?channel=UC-9-kyTW8ZkZNDHQJ6FgpwQ",
-    audioUrl: "/audio/sermon1.mp3",
-    notesUrl: "/notes/sermon1.pdf",
-    scriptureRefs: ["Acts 1:8", "Ephesians 3:16", "Romans 8:11"],
-    thumbnailUrl: "https://picsum.photos/seed/sermon1/800/450"
+    date: "2026-07-12",
+    series: "Sunday Service",
+    description: "A message from Pastor Santhosh at Grace Covenant Church's Sunday Service. Watch the full message on our YouTube channel.",
+    videoUrl: "https://www.youtube.com/embed/-9sIeUHWN_E",
+    scriptureRefs: [],
+    thumbnailUrl: "https://i.ytimg.com/vi/-9sIeUHWN_E/hqdefault.jpg"
   },
   {
     id: 'sermon-2',
-    title: "The Heart of a Servant",
+    title: "Picture of God - Part 2",
     speaker: "Pastor Santhosh",
-    date: "2024-07-07",
-    series: "Kingdom Living",
-    description: "Discover the transformative power of servant leadership as Pastor Santhosh unpacks what it means to have the heart of a servant. Learn practical ways to cultivate humility, compassion, and a Christ-like attitude in your daily interactions and ministry.",
-    videoUrl: "https://www.youtube.com/embed/kR6ABv7nFkY",
-    audioUrl: "/audio/sermon2.mp3",
-    notesUrl: "/notes/sermon2.pdf",
-    scriptureRefs: ["Philippians 2:3-8", "Mark 10:45", "John 13:1-17"],
-    thumbnailUrl: "https://picsum.photos/seed/sermon2/800/450"
+    date: "2026-07-05",
+    series: "Picture of God",
+    description: "Part two of the 'Picture of God' series from Pastor Santhosh, shared during our Lord's Table gathering.",
+    videoUrl: "https://www.youtube.com/embed/yF_fDSR0MgU",
+    scriptureRefs: [],
+    thumbnailUrl: "https://i.ytimg.com/vi/yF_fDSR0MgU/hqdefault.jpg"
   },
   {
     id: 'sermon-3',
-    title: "Do Not Be Afraid",
+    title: "Picture of God",
     speaker: "Pastor Santhosh",
-    date: "2024-06-30",
-    series: "Fearless Faith",
-    description: "Pastor Santhosh delivers an encouraging and timely message on overcoming fear through faith in God's promises. Learn why the Bible repeatedly tells us not to fear, and discover practical steps to walk in courage and confidence as you trust in God's unfailing love and protection.",
-    videoUrl: "https://www.youtube.com/embed/8p_T9x2T3t0",
-    audioUrl: "/audio/sermon3.mp3",
-    notesUrl: "/notes/sermon3.pdf",
-    scriptureRefs: ["Isaiah 41:10", "2 Timothy 1:7", "Joshua 1:9", "Psalm 23:4"],
-    thumbnailUrl: "https://picsum.photos/seed/sermon3/800/450"
+    date: "2026-06-28",
+    series: "Picture of God",
+    description: "Part one of the 'Picture of God' series from Pastor Santhosh, shared during our Sunday Service.",
+    videoUrl: "https://www.youtube.com/embed/LwUX7BslYPo",
+    scriptureRefs: [],
+    thumbnailUrl: "https://i.ytimg.com/vi/LwUX7BslYPo/hqdefault.jpg"
   },
 ];
 
@@ -62,40 +55,40 @@ export const events: Event[] = [
   {
     id: 'event-1',
     title: "Sunday Service",
-    date: "2025-11-23",
+    date: "2026-07-19",
     time: "9:00 AM - 10:30 AM",
     locationName: "Stonecutters Neighbourhood Centre",
     address: churchAddress,
     mapEmbedUrl: churchMapEmbedUrl,
     description: "Join us for our weekly Sunday service filled with worship, biblical teaching, and fellowship. All are welcome!",
     imageUrl: "/artifacts/sunday_service_worship_1763537430650.png",
-    registrationLink: "#",
+    registrationLink: "mailto:connect@gracecovenant.org?subject=Registration%20-%20Sunday%20Service",
     category: 'Worship'
   },
   {
     id: 'event-2',
     title: "Bible Study",
-    date: "2025-11-21",
+    date: "2026-07-17",
     time: "7:30 PM",
     locationName: "Stonecutters Neighbourhood Centre",
     address: churchAddress,
     mapEmbedUrl: churchMapEmbedUrl,
     description: "Dive deeper into God's Word in our Bible Study sessions. Join us on the 1st and 3rd Friday of each month.",
     imageUrl: "/artifacts/bible_study_warmth_1763537438596.png",
-    registrationLink: "#",
+    registrationLink: "mailto:connect@gracecovenant.org?subject=Registration%20-%20Bible%20Study",
     category: 'Study'
   },
   {
     id: 'event-3',
     title: "Teens Bible",
-    date: "2025-11-22",
+    date: "2026-07-18",
     time: "6:30 PM",
     locationName: "Stonecutters Neighbourhood Centre",
     address: churchAddress,
     mapEmbedUrl: churchMapEmbedUrl,
     description: "Dynamic Bible study for teens led by Nancy Anand. A place for youth to grow in faith, ask questions, and build friendships. Every Saturday at 6:30 PM!",
     imageUrl: "/artifacts/teens_bible_youth_1763542826529.png",
-    registrationLink: "#",
+    registrationLink: "mailto:youth@gracecovenant.org?subject=Registration%20-%20Teens%20Bible",
     category: 'Youth'
   },
 ];
@@ -104,27 +97,24 @@ export const ministries: Ministry[] = [
   {
     id: 'ministry-1',
     name: "GraceTeens",
-    slug: "Teens",
     description: "GraceTeens provides a safe, fun, and engaging environment for children from birth to 5th grade to learn about Jesus on their level. Our amazing team is passionate about partnering with parents to raise a generation of world-changers.",
-    imageUrl: "/artifacts/sunday_service_worship_1763537430650.png",
-    contactPerson: "Nancy Anand",
+    imageUrl: "/artifacts/kids_bible_classroom_1763537449346.png",
+    contactPerson: "Pastor Santhosh",
     contactEmail: "kids@gracecovenant.org",
     meetingInfo: "Saturdays during 6:30 PM In Person/Zoom ID - 4735795423"
   },
   {
     id: 'ministry-2',
-    name: "Sunday Service",
-    slug: "Congregation",
-    description: "Sunday Service ministry of GraceCovenant for students in 6th-12th grade. We exist to see students connected in community, growing in their faith, and empowered to make a difference in their schools and world.",
+    name: "Youth Ministry",
+    description: "Our Youth Ministry is for students in 6th-12th grade. We exist to see students connected in community, growing in their faith, and empowered to make a difference in their schools and world.",
     imageUrl: "/artifacts/teens_bible_youth_1763542826529.png",
-    contactPerson: "Pastor Santhosh",
+    contactPerson: "Nancy Anand",
     contactEmail: "youth@gracecovenant.org",
     meetingInfo: "Fridays at 7:30 PM"
   },
   {
     id: 'ministry-3',
     name: "Tongues of Fire",
-    slug: "groups",
     description: "We believe life is better together. Small groups are the heart of our church community, providing a place to build friendships, study God's word, and support one another. Groups meet throughout the week in homes across the city.",
     imageUrl: "/artifacts/bible_study_warmth_1763537438596.png",
     contactPerson: "Pastor Santhosh",
@@ -146,20 +136,20 @@ export const staff: Staff[] = [
     name: "Lisa Santhosh",
     role: "Praise & Worship Leader",
     bio: "Lisa Santhosh leads our Praise and worship ministry. Worship is grounded in biblical principles, focusing on thankful praise and honor for God's blessings and his role as a great king.",
-    imageUrl: "https://picsum.photos/seed/staff2/500/500"
+    imageUrl: "https://ui-avatars.com/api/?name=Lisa+Santhosh&background=1a365d&color=d4af37&size=500&bold=true&font-size=0.33"
   },
   {
     id: 'staff-3',
     name: "Sunitha",
     role: "Media Director",
     bio: "Sunitha oversees all media operations, including our digital presence and broadcast efforts. She focuses on innovative communication strategies to share our message with a broader audience.",
-    imageUrl: "https://picsum.photos/seed/staff3/500/500"
+    imageUrl: "https://ui-avatars.com/api/?name=Sunitha&background=1a365d&color=d4af37&size=500&bold=true&font-size=0.33"
   },
   {
     id: 'staff-4',
     name: "Nancy Anand",
     role: "Youth Pastor",
     bio: "Nancy has a passion for the next generation and leads our Teens Bible ministry with energy and authenticity. She creates a space where teens feel valued, heard, and encouraged to pursue Jesus in their own unique way.",
-    imageUrl: "https://picsum.photos/seed/staff4/500/500"
+    imageUrl: "https://ui-avatars.com/api/?name=Nancy+Anand&background=1a365d&color=d4af37&size=500&bold=true&font-size=0.33"
   },
 ];

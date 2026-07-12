@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { events } from '../data/mockData';
 import type { Event } from '../types';
+import Reveal from '../components/Reveal';
 
 const EventCard: React.FC<{ event: Event }> = ({ event }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
@@ -27,15 +28,23 @@ const EventsPage: React.FC = () => {
   
   return (
     <div className="bg-brand-cream">
-      <div className="pt-32 pb-16 bg-brand-blue text-white text-center">
-        <h1 className="text-5xl font-serif font-bold">Events</h1>
-        <p className="mt-4 text-lg max-w-2xl mx-auto">Find out what's happening at GraceCovenant.</p>
+      <div className="relative pt-40 pb-24 bg-cover bg-center" style={{ backgroundImage: "url('/artifacts/bible_study_warmth_1763537438596.png')" }}>
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="relative z-10 text-white text-center px-4">
+          <h3 className="text-sm font-bold uppercase tracking-[0.3em] text-brand-gold mb-4">What's On</h3>
+          <h1 className="text-6xl md:text-7xl font-serif font-extrabold">Events</h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto text-white/90">Find out what's happening at Grace Covenant.</p>
+        </div>
       </div>
-      
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="space-y-12">
           {upcomingEvents.length > 0 ? (
-            upcomingEvents.map(event => <EventCard key={event.id} event={event} />)
+            upcomingEvents.map((event, index) => (
+              <Reveal key={event.id} delay={index * 100}>
+                <EventCard event={event} />
+              </Reveal>
+            ))
           ) : (
             <p className="text-center text-xl text-slate-500">No upcoming events. Please check back soon!</p>
           )}

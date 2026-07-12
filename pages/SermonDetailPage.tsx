@@ -2,6 +2,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { sermons } from '../data/mockData';
+import { YoutubeIcon } from '../components/icons';
 
 // Helper function to convert YouTube watch URL to embed URL
 const getYouTubeEmbedUrl = (url: string): string => {
@@ -31,6 +32,12 @@ const getYouTubeEmbedUrl = (url: string): string => {
   }
 };
 
+// Helper function to convert a YouTube embed URL to a watch URL
+const getYouTubeWatchUrl = (embedUrl: string): string => {
+  const match = embedUrl.match(/\/embed\/([^?]+)/);
+  return match ? `https://www.youtube.com/watch?v=${match[1]}` : embedUrl;
+};
+
 const SermonDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const sermon = sermons.find(s => s.id === id);
@@ -57,21 +64,17 @@ const SermonDetailPage: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto">
 
-          {sermon.liveStreamUrl && (
-            <div className="mb-8 text-center">
-              <a
-                href={sermon.liveStreamUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-10 py-4 bg-red-600 text-white font-bold text-lg uppercase tracking-wider rounded-full hover:bg-red-700 transition-transform transform hover:scale-105 animate-pulse"
-              >
-                <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                  <circle cx="10" cy="10" r="8" />
-                </svg>
-                Watch Live
-              </a>
-            </div>
-          )}
+          <div className="mb-8 text-center">
+            <a
+              href={getYouTubeWatchUrl(sermon.videoUrl)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-red-600 text-white font-bold uppercase tracking-wider rounded-full hover:bg-red-700 transition-all transform hover:scale-105"
+            >
+              <YoutubeIcon className="h-5 w-5" />
+              Watch on YouTube
+            </a>
+          </div>
 
           <div className="aspect-w-16 aspect-h-9 mb-8 relative" style={{ paddingBottom: '56.25%' }}>
             <iframe
@@ -90,15 +93,9 @@ const SermonDetailPage: React.FC = () => {
               <p>{sermon.description}</p>
             </div>
 
-            <div className="mt-6 border-t pt-6 space-y-4">
-              <div>
-                <h3 className="font-bold">Scripture References</h3>
-                <p>{sermon.scriptureRefs.join(', ') || 'N/A'}</p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href={sermon.audioUrl} download className="px-6 py-2 bg-brand-blue text-white font-bold rounded-full text-center hover:bg-brand-dark-blue transition-colors">Download Audio</a>
-                <a href={sermon.notesUrl} download className="px-6 py-2 bg-brand-blue text-white font-bold rounded-full text-center hover:bg-brand-dark-blue transition-colors">Download Notes</a>
-              </div>
+            <div className="mt-6 border-t pt-6">
+              <h3 className="font-bold">Scripture References</h3>
+              <p>{sermon.scriptureRefs.join(', ') || 'N/A'}</p>
             </div>
           </div>
         </div>
